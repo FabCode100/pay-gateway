@@ -18,6 +18,12 @@ import { Transaction } from './transactions/transaction.entity';
       database: process.env.DB_NAME || 'sanar_pay',
       entities: [Transaction],
       synchronize: true, // dev only
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
     }),
     RedisModule,
     RabbitmqModule,
@@ -26,4 +32,4 @@ import { Transaction } from './transactions/transaction.entity';
     HealthModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
