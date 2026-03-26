@@ -1,22 +1,8 @@
-# 💳 Payment-Gateway
+# 💳 Payment Gateway
 
-![Payment Gateway Hero](file:///C:/Users/fabri/.gemini/antigravity/brain/bc976243-fc17-4a57-b866-3cbff16b7275/payment_gateway_hero_1774547033158.png)
+Simulador de orquestração de pagamentos com **idempotência via Redis**, **processamento assíncrono via RabbitMQ**, status em tempo-real via **WebSocket**, e persistência em **PostgreSQL**.
 
-A high-performance, resilient **Payment Orchestration Simulator** built with **NestJS**, **Next.js**, and a distributed architecture for safe and scalable transaction processing.
-
----
-
-## 🚀 Key Features
-
-- **✅ Idempotency Control**: Redis-based locking to prevent duplicate transactions.
-- **⚡ Asynchronous Processing**: RabbitMQ workers for reliable background task execution.
-- **🕒 Real-time Updates**: WebSocket (Socket.io) for instant payment status tracking.
-- **🔒 Persistence**: Transaction history stored in **PostgreSQL**.
-- **☁️ Cloud Ready**: Fully dockerized and ready for **Google Cloud Run**, **Neon**, and **Upstash**.
-
----
-
-## 🛠️ Tech Stack
+## Stack
 
 | Layer | Technology | Infrastructure (Cloud) |
 |---|---|---|
