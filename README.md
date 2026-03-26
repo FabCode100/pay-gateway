@@ -1,4 +1,4 @@
-# 💳 Sanar-Pay Gateway
+# 💳 Payment Gateway
 
 Simulador de orquestração de pagamentos com **idempotência via Redis**, **processamento assíncrono via RabbitMQ**, status em tempo-real via **WebSocket**, e persistência em **PostgreSQL**.
 
