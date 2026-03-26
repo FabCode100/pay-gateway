@@ -1,16 +1,18 @@
 # 💳 Payment Gateway
 
-Simulador de orquestração de pagamentos com **idempotência via Redis**, **processamento assíncrono via RabbitMQ**, status em tempo-real via **WebSocket**, e persistência em **PostgreSQL**.
+![Payment Gateway Hero](file:///C:/Users/fabri/.gemini/antigravity/brain/bc976243-fc17-4a57-b866-3cbff16b7275/payment_gateway_hero_1774547033158.png)
 
-## Stack
+Um simulador de orquestração de pagamentos de alta performance e resiliente, construído com **NestJS**, **Next.js** e uma arquitetura distribuída para processamento de transações seguro e escalável.
 
-| Layer | Technology | Infrastructure (Cloud) |
-|---|---|---|
-| **Frontend** | [Next.js](https://nextjs.org/) (React, TypeScript) | Google Cloud Run / Static Hosting |
-| **Backend** | [NestJS](https://nestjs.com/) (Node.js) | Google Cloud Run |
-| **Database** | [PostgreSQL](https://www.postgresql.org/) (TypeORM) | [Neon.tech](https://neon.tech/) |
-| **Cache/Locks** | [Redis](https://redis.io/) (ioredis) | [Upstash](https://upstash.com/) |
-| **Messaging** | [RabbitMQ](https://www.rabbitmq.com/) (amqplib) | [CloudAMQP](https://www.cloudamqp.com/) |
+---
+
+## 🚀 Funcionalidades Principais
+
+- **✅ Controle de Idempotência**: Bloqueio via Redis para evitar transações duplicadas.
+- **⚡ Processamento Assíncrono**: Workers RabbitMQ para execução confiável de tarefas em segundo plano.
+- **🕒 Atualizações em Tempo Real**: WebSocket (Socket.io) para rastreamento instantâneo do status do pagamento.
+- **🔒 Persistência**: Histórico de transações armazenado no **PostgreSQL**.
+- **☁️ Pronto para Nuvem**: Totalmente dockerizado e preparado para **Google Cloud Run**, **Neon** e **Upstash**.
 
 ---
 
