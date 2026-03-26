@@ -7,15 +7,26 @@ export class RedisService implements OnModuleDestroy {
   private readonly logger = new Logger(RedisService.name);
 
   constructor() {
-    this.client = new Redis({
-      host: process.env.REDIS_HOST || 'localhost',
-      port: parseInt(process.env.REDIS_PORT || '6379'),
-      retryStrategy: (times) => Math.min(times * 50, 2000),
-    });
+    // Usamos a URL completa se ela existir, senão montamos o host/port
+    const redisUrl = process.env.REDIS_URL;
+
+    this.client = redisUrl
+      ? new Redis(redisUrl, {
+        tls: {
+          rejectUnauthorized: false, // ESSENCIAL para Upstash/Render
+        },
+        retryStrategy: (times) => Math.min(times * 50, 2000),
+      })
+      : new Redis({
+        host: process.env.REDIS_HOST || 'localhost',
+        port: parseInt(process.env.REDIS_PORT || '6379'),
+        retryStrategy: (times) => Math.min(times * 50, 2000),
+      });
 
     this.client.on('connect', () => this.logger.log('✅ Redis connected'));
-    this.client.on('error', (err) => this.logger.error('Redis error', err));
+    this.client.on('error', (err) => this.logger.error('❌ Redis error', err));
   }
+
 
   async get(key: string): Promise<string | null> {
     return this.client.get(key);
