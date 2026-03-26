@@ -1,7 +1,5 @@
 # 💳 Payment Gateway
 
-![Payment Gateway Hero](file:///C:/Users/fabri/.gemini/antigravity/brain/bc976243-fc17-4a57-b866-3cbff16b7275/payment_gateway_hero_1774547033158.png)
-
 Um simulador de orquestração de pagamentos de alta performance e resiliente, construído com **NestJS**, **Next.js** e uma arquitetura distribuída para processamento de transações seguro e escalável.
 
 ---
